@@ -31,7 +31,7 @@ class block_remote_courses_edit_form extends block_edit_form {
 
         // Configure the block title.
         $mform->addElement('text', 'config_title', get_string('blocktitle', 'block_remote_courses'));
-        $mform->setDefault('config_title', 'Remote Courses');
+        $mform->setDefault('config_title', get_string('remote_courses', 'block_remote_courses'));
         $mform->setType('config_title', PARAM_MULTILANG);
 
         // Remote site.

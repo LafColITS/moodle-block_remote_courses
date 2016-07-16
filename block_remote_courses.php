@@ -42,7 +42,7 @@ class block_remote_courses extends block_base {
             return $this->content;
         }
 
-        $this->content         = new stdClass;
+        $this->content         = new stdClass();
         $this->content->text   = '';
         $this->content->footer = '';
 
@@ -53,7 +53,7 @@ class block_remote_courses extends block_base {
 
         // Quit if remote URL and token aren't set.
         if (empty($this->config->wstoken) || empty($this->config->remotesite)) {
-            $this->content->text = 'Webservice not configured';
+            $this->content->text = get_string('unconfigured', 'block_remote_courses');
             return $this->content;
         }
 
@@ -96,7 +96,7 @@ class block_remote_courses extends block_base {
         if (!empty($this->config->title)) {
             $this->title = $this->config->title;
         } else {
-            $this->title = 'Remote Courses';
+            $this->title = get_string('remote_courses', 'block_remote_courses');
         }
     }
 }
