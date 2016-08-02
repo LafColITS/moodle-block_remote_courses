@@ -24,7 +24,20 @@
 
 require_once("$CFG->dirroot/blocks/remote_courses/locallib.php");
 
+/**
+ * Loads the block editing form.
+ *
+ * @package   block_remote_courses
+ * @copyright 2015 Lafayette College ITS
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class block_remote_courses_edit_form extends block_edit_form {
+
+    /**
+     * Defines the block editing form.
+     *
+     * @param stdClass $mform
+     */
     protected function specific_definition($mform) {
         // Section header title according to language file.
         $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
