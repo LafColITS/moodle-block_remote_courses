@@ -1,6 +1,8 @@
 Remote courses block
 ===========================
 
+[![Build Status](https://travis-ci.org/LafColITS/moodle-block_remote_courses.svg?branch=master)](https://travis-ci.org/LafColITS/moodle-block_remote_courses)
+
 This block prints a list of courses from another Moodle instance. It is designed for use with the [Remote course web service](https://github.com/LafColITS/moodle-local_remote_courses).
 
 Configuration
@@ -9,7 +11,7 @@ To use the block you'll need to configure the local web service on the remote in
 
 Requirements
 ------------
-- Moodle 2.6 (build 2013111800 or later)
+- Moodle 3.4 (build 2017111300 or later)
 
 Installation
 ------------
