@@ -15,20 +15,28 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Prints a list of courses from another Moodle instance.
+ * Privacy implementation for block_remote_courses.
  *
  * @package   block_remote_courses
- * @copyright 2015 Lafayette College ITS
+ * @copyright 2018 Lafayette College ITS
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blockremotesite'] = 'Remote site';
-$string['blockwstoken'] = 'Webservice token';
-$string['blocknumcourses'] = 'Courses to show';
-$string['blockintrotext'] = 'Introductory text';
-$string['blocktitle'] = 'Block title';
-$string['pluginname'] = 'Remote courses block';
-$string['privacy:metadata'] = 'The Remote courses block plugin does not store any personal data.';
-$string['remote_courses'] = 'Remote courses';
-$string['remote_courses:addinstance'] = 'Add the Remote courses block';
-$string['unconfigured'] = 'Please configure the webservice';
+namespace block_remote_courses\privacy;
+
+defined('MOODLE_INTERNAL') || die();
+
+class provider implements
+    // This plugin does not store any personal user data.
+    \core_privacy\local\metadata\null_provider {
+
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return  string
+     */
+    public static function get_reason() {
+        return 'privacy:metadata';
+    }
+}

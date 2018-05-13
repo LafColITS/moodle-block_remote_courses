@@ -23,7 +23,7 @@
  */
 
 $plugin->version   = 2016080200;
-$plugin->requires  = 2013111800;
+$plugin->requires  = 2017051500;
 $plugin->component = 'block_remote_courses';
 $plugin->maturity  = MATURITY_STABLE;
 $plugin->release   = 'v1.1.1';
