@@ -11,7 +11,7 @@ To use the block you'll need to configure the local web service on the remote in
 
 Requirements
 ------------
-- Moodle 3.4 (build 2017111300 or later)
+- Moodle 3.6 (build 2018120300 or later)
 
 Installation
 ------------
