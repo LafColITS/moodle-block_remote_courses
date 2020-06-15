@@ -1,9 +1,14 @@
 # Changelog
 
+## 3.6.0 (June 15, 2020)
+
+- Code cleanup
+- Streamlined unit testing matrix
+- Dropped support for Moodle 3.4 and 3.5
+
 ## 3.4.0 (May 13, 2018)
 
 - Updated for GDPR compliance
-
 - Changed version numbering to match stable version
 
 ## 1.1.1 (August 2, 2016)
