@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Change default branch to "main"
+- Update CI tool to version 3
+
 ## 3.6.0 (June 15, 2020)
 
 - Code cleanup
