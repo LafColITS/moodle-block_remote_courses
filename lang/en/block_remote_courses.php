@@ -22,10 +22,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['blockintrotext'] = 'Introductory text';
+$string['blocknumcourses'] = 'Courses to show';
 $string['blockremotesite'] = 'Remote site';
 $string['blockwstoken'] = 'Webservice token';
-$string['blocknumcourses'] = 'Courses to show';
-$string['blockintrotext'] = 'Introductory text';
 $string['blocktitle'] = 'Block title';
 $string['pluginname'] = 'Remote courses block';
 $string['privacy:metadata'] = 'The Remote courses block plugin does not store any personal data.';

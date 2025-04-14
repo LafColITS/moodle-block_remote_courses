@@ -67,7 +67,7 @@ class block_remote_courses_edit_form extends block_edit_form {
 
         // Courses to show.
         $mform->addElement('text', 'config_numcourses',
-            get_string('blocknumcourses', 'block_remote_courses'), array('size' => '2'));
+            get_string('blocknumcourses', 'block_remote_courses'), ['size' => '2']);
         $mform->setDefault('config_numcourses', REMOTE_COURSES_DEFAULT_DISPLAY);
         $mform->setType('config_numcourses', PARAM_INT);
     }

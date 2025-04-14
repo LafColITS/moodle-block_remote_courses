@@ -22,8 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Block definition.
  *
@@ -45,9 +43,9 @@ class block_remote_courses extends block_base {
      * @return array
      */
     public function applicable_formats() {
-        return array(
-            'site-index' => true
-        );
+        return [
+            'site-index' => true,
+        ];
     }
 
     /**
@@ -85,7 +83,7 @@ class block_remote_courses extends block_base {
         $format = 'json';
 
         // Params: we use the username for consistency.
-        $params = array('username' => $USER->username);
+        $params = ['username' => $USER->username];
 
         // Retrieve data.
         $curl = new curl;
@@ -96,8 +94,8 @@ class block_remote_courses extends block_base {
             foreach ($resp as $course) {
                 $this->content->text .= html_writer::tag('li',
                     html_writer::tag('a', $course->fullname,
-                        array('href' => $this->config->remotesite . '/course/view.php?id='. $course->id)),
-                        array('class' => 'remote_courses'));
+                        ['href' => $this->config->remotesite . '/course/view.php?id='. $course->id]),
+                        ['class' => 'remote_courses']);
                 $coursesprinted++;
                 if ($coursesprinted == $this->config->numcourses) {
                     break;

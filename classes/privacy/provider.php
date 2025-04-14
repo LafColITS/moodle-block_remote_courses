@@ -24,8 +24,6 @@
 
 namespace block_remote_courses\privacy;
 
-defined('MOODLE_INTERNAL') || die();
-
 /**
  * Privacy implementation for block_remote_courses.
  *
@@ -43,7 +41,7 @@ class provider implements
      *
      * @return  string
      */
-    public static function get_reason() : string {
+    public static function get_reason(): string {
         return 'privacy:metadata';
     }
 }
