@@ -34,7 +34,6 @@ require_once("$CFG->dirroot/blocks/remote_courses/locallib.php");
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_remote_courses_edit_form extends block_edit_form {
-
     /**
      * Defines the block editing form.
      *
@@ -66,8 +65,12 @@ class block_remote_courses_edit_form extends block_edit_form {
         // In the future this might be configurable.
 
         // Courses to show.
-        $mform->addElement('text', 'config_numcourses',
-            get_string('blocknumcourses', 'block_remote_courses'), ['size' => '2']);
+        $mform->addElement(
+            'text',
+            'config_numcourses',
+            get_string('blocknumcourses', 'block_remote_courses'),
+            ['size' => '2']
+        );
         $mform->setDefault('config_numcourses', REMOTE_COURSES_DEFAULT_DISPLAY);
         $mform->setType('config_numcourses', PARAM_INT);
     }

@@ -30,7 +30,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class block_remote_courses extends block_base {
-
     /**
      * Sets the block title.
      */
@@ -86,16 +85,21 @@ class block_remote_courses extends block_base {
         $params = ['username' => $USER->username];
 
         // Retrieve data.
-        $curl = new curl;
-        $resp = json_decode($curl->post($url. '&moodlewsrestformat='.$format.'&'.http_build_query($params)));
+        $curl = new curl();
+        $resp = json_decode($curl->post($url . '&moodlewsrestformat=' . $format . '&' . http_build_query($params)));
         if (!is_null($resp) && is_array($resp) && count($resp) > 0) {
             $this->content->text .= '<ul class="list">';
             $coursesprinted = 0;
             foreach ($resp as $course) {
-                $this->content->text .= html_writer::tag('li',
-                    html_writer::tag('a', $course->fullname,
-                        ['href' => $this->config->remotesite . '/course/view.php?id='. $course->id]),
-                        ['class' => 'remote_courses']);
+                $this->content->text .= html_writer::tag(
+                    'li',
+                    html_writer::tag(
+                        'a',
+                        $course->fullname,
+                        ['href' => $this->config->remotesite . '/course/view.php?id=' . $course->id]
+                    ),
+                    ['class' => 'remote_courses']
+                );
                 $coursesprinted++;
                 if ($coursesprinted == $this->config->numcourses) {
                     break;
