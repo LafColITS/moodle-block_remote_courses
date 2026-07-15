@@ -24,8 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2020061500;
+$plugin->version   = 2020061501;
 $plugin->requires  = 2022112800;
 $plugin->component = 'block_remote_courses';
 $plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = 'v3.6.0';
+$plugin->release   = 'v3.6.1';

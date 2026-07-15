@@ -1,0 +1,12 @@
+{
+    "name": "lafayettecollege/moodle-block_remote_courses",
+    "description": "This block prints a list of courses from another Moodle instance. It is designed for use with the Remote course web service.",
+    "type": "moodle-block",
+    "require": {
+        "composer/installers": "*"
+    },
+    "license": "GPL-3.0-or-later",
+    "extra": {
+        "installer-name": "remote_courses"
+    }
+}
