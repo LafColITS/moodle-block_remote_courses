@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Drop support for Moodle 4.1-4.4
+
 ## 3.6.1 (July 15, 2026)
 
 - Change default branch to "main"
