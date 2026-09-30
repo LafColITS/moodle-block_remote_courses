@@ -25,8 +25,8 @@
 $string['blockintrotext'] = 'Introductory text';
 $string['blocknumcourses'] = 'Courses to show';
 $string['blockremotesite'] = 'Remote site';
-$string['blockwstoken'] = 'Webservice token';
 $string['blocktitle'] = 'Block title';
+$string['blockwstoken'] = 'Webservice token';
 $string['pluginname'] = 'Remote courses block';
 $string['privacy:metadata'] = 'The Remote courses block plugin does not store any personal data.';
 $string['remote_courses'] = 'Remote courses';
